@@ -14,16 +14,24 @@ namespace aspnet_vuejs_basetemplate.Controllers
     public class MainController : ControllerBase
     {
         [HttpGet]
+        [Route("")]
         [Produces("text/html")]
         public async Task<IActionResult> Get()
         {
             var code = "";
-            using (var stream = new FileStream("dist/index.html", FileMode.Open))
+            try
             {
-                using (var sreader = new StreamReader(stream))
+                using (var stream = new FileStream("dist/index.html", FileMode.Open))
                 {
-                    code = await sreader.ReadToEndAsync();
+                    using (var sreader = new StreamReader(stream))
+                    {
+                        code = await sreader.ReadToEndAsync();
+                    }
                 }
+            }
+            catch 
+            {
+                code = @"You should launch: ""npm run build"" for the first time";
             }
             return new ContentResult()
             {
@@ -34,7 +42,7 @@ namespace aspnet_vuejs_basetemplate.Controllers
 
         [HttpGet("serverData")]
         [Produces("application/json")]
-        public ActionResult<string> ServerData(int id)
+        public ActionResult<string> ServerData()
         {
             return Ok(new { Text = "Hi! I'm from server!" });
         }
