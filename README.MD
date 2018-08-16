@@ -278,6 +278,10 @@ Hope this can help who want works with the wonderful [__Vue.js__](https://www.vu
 
 ## Note 
 
+I'm using __visual studio code__ to work with aspnet core and Vue.js, if you use it too, you can find useful these extensions!
+
+[Extensions](wwwroot/screenshot.PNG)
+
 ## About
 [Andrea Vincenzo Abbondanza](http://www.andrewdev.eu)
 
