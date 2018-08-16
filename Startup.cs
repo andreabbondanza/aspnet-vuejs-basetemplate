@@ -40,7 +40,21 @@ namespace aspnet_vuejs_basetemplate
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+
+#if DEBUG
+            // cors policy for work with double server
+            app.UseCors(builder =>
+               builder.WithOrigins("http://localhost:8080").AllowAnyHeader().AllowAnyMethod());
+#endif
+            // manage your 404 redirects from server
+            app.Use(async (context, next) =>
+                                {
+                                    await next.Invoke();
+                                    if (context.Response.StatusCode == 404)
+                                        context.Response.Redirect("/");
+                                });
+
+            // if you need it => app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
