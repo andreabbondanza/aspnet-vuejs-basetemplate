@@ -280,7 +280,7 @@ Hope this can help who want works with the wonderful [__Vue.js__](https://www.vu
 
 I'm using __visual studio code__ to work with aspnet core and Vue.js, if you use it too, you can find useful these extensions!
 
-[Extensions](wwwroot/screenshot.PNG)
+<img src="./wwwroot/screenshot.PNG" style="width:400px" />
 
 ## About
 [Andrea Vincenzo Abbondanza](http://www.andrewdev.eu)
