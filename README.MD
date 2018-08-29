@@ -4,7 +4,9 @@
 
 ## What is this?
 
-Honestly, I'm a software engineer, a backend man, however, someone that can't do frontends, grahpics, etc. I've always been fashinating by the UI world but my skills and my patience in the new __javascript-wtf-hell-packages-environment__ aren't the best.
+Honestly, I'm a software engineer, a backend man... however, someone that can't do frontends, grahpics, etc. 
+
+I've always been fashinating by the UI world but my skills and my patience in the new __javascript-wtf-hell-packages-environment__ aren't the best.
 
 I love .net core, working with asp net core for websites and web api and for UI until now I always used the classic approach: Razor pages + jquery.
 
