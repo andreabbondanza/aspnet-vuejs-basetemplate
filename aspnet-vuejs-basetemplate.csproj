@@ -11,5 +11,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-
+<ItemGroup>  
+    <MySourceFiles Include="$(ProjectDir)\dist\**\*.*"/>  
+  </ItemGroup>  
+  <Target Name="CopyFiles" AfterTargets="Publish">
+      <Copy  
+          SourceFiles="@(MySourceFiles)"  
+          DestinationFiles="@(MySourceFiles->'$(PublishDir)\dist\%(RecursiveDir)%(Filename)%(Extension)')"/>  
+  </Target>  
 </Project>
